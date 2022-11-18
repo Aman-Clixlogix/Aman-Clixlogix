@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNextLTPro-Demi.otf">
+            <string>AvenirNextLTPro-Demi</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BABLHeaderView" customModule="BABL" customModuleProvider="target">
+            <connections>
+                <outlet property="btnDetail" destination="Ekb-z7-59p" id="gFv-A1-Lzs"/>
+                <outlet property="btnTime" destination="stX-Gn-lfn" id="WIx-BS-Yrh"/>
+                <outlet property="containerView" destination="iN0-l3-epB" id="vIJ-pL-pAO"/>
+                <outlet property="imgBackground" destination="r3q-Ia-S4c" id="2EJ-Ev-Ile"/>
+                <outlet property="imgUser" destination="DB6-7o-F76" id="FAT-dA-Hsz"/>
+                <outlet property="txtTitle" destination="5tu-C1-141" id="SFy-cQ-cOJ"/>
+                <outlet property="viewRightArrow" destination="ydH-ZT-P8d" id="LqR-Pz-I1F"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="271"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vS2-kO-HeP" customClass="AJCustomView" customModule="BABL" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="48" width="414" height="223"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r3q-Ia-S4c">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="223"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DB6-7o-F76" customClass="ImageView" customModule="BABL" customModuleProvider="target">
+                            <rect key="frame" x="10" y="20" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="iwo-iQ-pVN"/>
+                                <constraint firstAttribute="width" constant="40" id="qUz-KE-4wl"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="circle" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stX-Gn-lfn">
+                            <rect key="frame" x="65" y="178" width="66" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="d3J-fD-Wu2"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AvenirNextLTPro-Demi" family="Avenir Next LT Pro" pointSize="15"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title=" 2 Hrs" image="clock" catalog="system"/>
+                        </button>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tu-C1-141">
+                            <rect key="frame" x="65" y="15" width="269" height="143"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="CaQ-Vr-7IR"/>
+                            </constraints>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="AvenirNextLTPro-Demi" family="Avenir Next LT Pro" pointSize="18"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new user start screen icon" translatesAutoresizingMaskIntoConstraints="NO" id="3ns-8Q-MtW">
+                            <rect key="frame" x="332" y="10" width="112" height="203"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="112" id="Ebs-ns-PQ6"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ydH-ZT-P8d" customClass="AJCustomView" customModule="BABL" customModuleProvider="target">
+                            <rect key="frame" x="369" y="178" width="80" height="80"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detail icon" translatesAutoresizingMaskIntoConstraints="NO" id="ptT-lo-MkD">
+                                    <rect key="frame" x="15" y="15" width="20" height="15"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="15" id="RRx-dO-VbB"/>
+                                        <constraint firstAttribute="width" constant="20" id="lxd-65-xFc"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="ptT-lo-MkD" firstAttribute="top" secondItem="ydH-ZT-P8d" secondAttribute="top" constant="15" id="Sdf-Un-CR5"/>
+                                <constraint firstAttribute="width" constant="80" id="kB8-kX-SsT"/>
+                                <constraint firstItem="ptT-lo-MkD" firstAttribute="leading" secondItem="ydH-ZT-P8d" secondAttribute="leading" constant="15" id="msl-We-1Lx"/>
+                                <constraint firstAttribute="height" constant="80" id="sKl-Qi-qwK"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="40"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ekb-z7-59p">
+                            <rect key="frame" x="314" y="20" width="100" height="203"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="1UB-cn-FEx"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.65490196079999996" green="0.70588235290000001" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="DB6-7o-F76" firstAttribute="top" secondItem="vS2-kO-HeP" secondAttribute="top" constant="20" id="1sP-PY-wUu"/>
+                        <constraint firstAttribute="trailing" secondItem="ydH-ZT-P8d" secondAttribute="trailing" constant="-35" id="CeN-Fs-G9C"/>
+                        <constraint firstAttribute="trailing" secondItem="5tu-C1-141" secondAttribute="trailing" constant="80" id="ILC-5e-FRR"/>
+                        <constraint firstAttribute="trailing" secondItem="Ekb-z7-59p" secondAttribute="trailing" id="SWC-tz-nv1"/>
+                        <constraint firstItem="r3q-Ia-S4c" firstAttribute="top" secondItem="vS2-kO-HeP" secondAttribute="top" id="ScV-YB-nH2"/>
+                        <constraint firstItem="stX-Gn-lfn" firstAttribute="top" secondItem="5tu-C1-141" secondAttribute="bottom" constant="20" id="TLq-61-tkc"/>
+                        <constraint firstItem="stX-Gn-lfn" firstAttribute="leading" secondItem="5tu-C1-141" secondAttribute="leading" id="Tpj-Sv-uLv"/>
+                        <constraint firstAttribute="trailing" secondItem="3ns-8Q-MtW" secondAttribute="trailing" constant="-30" id="UTh-hW-6AV"/>
+                        <constraint firstItem="Ekb-z7-59p" firstAttribute="top" secondItem="vS2-kO-HeP" secondAttribute="top" constant="20" id="UzG-ce-egh"/>
+                        <constraint firstAttribute="bottom" secondItem="ydH-ZT-P8d" secondAttribute="bottom" constant="-35" id="bWT-XL-7bL"/>
+                        <constraint firstAttribute="trailing" secondItem="r3q-Ia-S4c" secondAttribute="trailing" id="bzj-YU-Z34"/>
+                        <constraint firstItem="5tu-C1-141" firstAttribute="top" secondItem="vS2-kO-HeP" secondAttribute="top" constant="15" id="c1u-mm-rGL"/>
+                        <constraint firstItem="3ns-8Q-MtW" firstAttribute="top" secondItem="vS2-kO-HeP" secondAttribute="top" constant="10" id="dwa-fU-gDy"/>
+                        <constraint firstItem="DB6-7o-F76" firstAttribute="leading" secondItem="vS2-kO-HeP" secondAttribute="leading" constant="10" id="iIh-dx-7fc"/>
+                        <constraint firstAttribute="bottom" secondItem="stX-Gn-lfn" secondAttribute="bottom" constant="20" id="ie7-hV-1U7"/>
+                        <constraint firstItem="5tu-C1-141" firstAttribute="leading" secondItem="DB6-7o-F76" secondAttribute="trailing" constant="15" id="poY-cK-mcD"/>
+                        <constraint firstAttribute="bottom" secondItem="r3q-Ia-S4c" secondAttribute="bottom" id="rah-Lk-RmO"/>
+                        <constraint firstItem="r3q-Ia-S4c" firstAttribute="leading" secondItem="vS2-kO-HeP" secondAttribute="leading" id="vFj-JX-Hm5"/>
+                        <constraint firstAttribute="bottom" secondItem="Ekb-z7-59p" secondAttribute="bottom" id="yBz-4W-AsS"/>
+                        <constraint firstAttribute="bottom" secondItem="3ns-8Q-MtW" secondAttribute="bottom" constant="10" id="zGv-Ex-DmF"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vS2-kO-HeP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Asw-Ma-Dwu"/>
+                <constraint firstItem="vS2-kO-HeP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ONv-s1-sUM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vS2-kO-HeP" secondAttribute="trailing" id="vx1-MP-JN0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="vS2-kO-HeP" secondAttribute="bottom" id="zJh-mt-Lsi"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="173.91304347826087" y="-10.379464285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="clock" catalog="system" width="128" height="123"/>
+        <image name="detail icon" width="16.5" height="15"/>
+        <image name="new user start screen icon" width="120" height="138"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

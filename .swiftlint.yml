@@ -1,0 +1,34 @@
+disabled_rules:
+    - line_length
+    - type_name
+    - trailing_whitespace
+    - vertical_whitespace
+    - trailing_newline
+    - function_body_length
+    - file_length
+    - type_body_length
+    - syntactic_sugar
+    - identifier_name
+    - trailing_comma
+    - nesting
+    - cyclomatic_complexity
+    - switch_case_alignment
+    - multiple_closures_with_trailing_closure
+    - function_parameter_count
+    - large_tuple
+    - void_return
+    - class_delegate_protocol
+    - weak_delegate
+    - unused_closure_parameter
+    - for_where
+    - redundant_optional_initialization
+    - unused_optional_binding
+    - legacy_constructor
+    - force_try
+    - implicit_getter
+    - control_statement
+    - block_based_kvo
+    - force_cast
+excluded:
+  - Carthage
+  - Pods
