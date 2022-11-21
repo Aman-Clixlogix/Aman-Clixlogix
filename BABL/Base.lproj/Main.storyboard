@@ -8762,6 +8762,9 @@
         <designable name="ChW-rV-yH6">
             <size key="intrinsicContentSize" width="20" height="20"/>
         </designable>
+        <designable name="Cm3-ZU-2AI">
+            <size key="intrinsicContentSize" width="12.5" height="22"/>
+        </designable>
         <designable name="GPh-tu-wMD">
             <size key="intrinsicContentSize" width="18" height="20"/>
         </designable>
