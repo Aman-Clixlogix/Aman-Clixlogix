@@ -31,8 +31,8 @@ struct UserProfileViewModel {
         }
     }
     
-    func profileSetupAPI(fullName: String, email: String, location: String, pronouns: String, registrationId: String, bio: String, dob: String, fb: String, twitter: String, linkedin: String, insta: String) {
-        let dic = [
+    func profileSetupAPI(fullName: String, email: String, location: String, pronouns: String, registrationId: String, bio: String, dob: String, fb: String, twitter: String, linkedin: String, insta: String, privateAccount: Bool) {
+        let dic: [String: Any] = [
                    "full_name": fullName,
                    "location": location,
                    "pronouns": pronouns,
@@ -43,7 +43,8 @@ struct UserProfileViewModel {
                    "twitter": twitter,
                    "linked_in": linkedin,
                    "instagram": insta,
-                   "registration_id": registrationId
+                   "registration_id": registrationId,
+                   "private_account": privateAccount
                    ]
         let token = UserDefaults.standard.string(forKey: UD_TOKEN) ?? ""
         SessionManager.shared.multipartformPostrequest(url: (UrlName.updateProfile + (resultsData?.first?.profileId ?? "")) + "/", method: .put, param: dic, imageKey: "file.jpeg", image: nil, imageName: "", userToken: token, objectClass: UpdateProfileModel.self) { response in

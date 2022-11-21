@@ -5292,9 +5292,8 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yVk-qU-CmF">
-                                                                <rect key="frame" x="0.0" y="86" width="40" height="38.5"/>
-                                                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Anonymize red icon" translatesAutoresizingMaskIntoConstraints="NO" id="yVk-qU-CmF">
+                                                                <rect key="frame" x="0.0" y="85.5" width="40" height="40"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="40" id="H8j-4C-hOQ"/>
                                                                     <constraint firstAttribute="width" constant="40" id="QIB-E4-7Ao"/>
@@ -5312,6 +5311,9 @@
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uTK-yM-yOD">
                                                                 <rect key="frame" x="291" y="90" width="51" height="31"/>
                                                                 <color key="onTintColor" name="GradientPoint2"/>
+                                                                <connections>
+                                                                    <action selector="switchPrivateAction:" destination="Rig-4o-Ev6" eventType="valueChanged" id="DCq-bl-f0m"/>
+                                                                </connections>
                                                             </switch>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Build Version 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFx-8u-5gN">
                                                                 <rect key="frame" x="0.0" y="145" width="340" height="25"/>
@@ -5439,6 +5441,7 @@
                     <connections>
                         <outlet property="datePicker" destination="tHM-bN-HiD" id="T9Z-yc-nEF"/>
                         <outlet property="imgUser" destination="zOk-WD-GFc" id="qPM-mm-bAu"/>
+                        <outlet property="switchPrivateAcnt" destination="uTK-yM-yOD" id="x1o-MG-c3G"/>
                         <outlet property="txtDOB" destination="1zI-Pv-6Ss" id="jaB-ck-ZN2"/>
                         <outlet property="txtEmail" destination="w39-Mv-G5O" id="wge-pT-z1S"/>
                         <outlet property="txtFB" destination="t0z-ZZ-5If" id="vUt-YH-t90"/>
@@ -8827,6 +8830,7 @@
         </designable>
     </designables>
     <resources>
+        <image name="Anonymize red icon" width="24" height="32.5"/>
         <image name="Bell  colour icon" width="16" height="20.5"/>
         <image name="Contact us (my settings) icon" width="24.5" height="24.5"/>
         <image name="Facebook green icon" width="12.5" height="20"/>

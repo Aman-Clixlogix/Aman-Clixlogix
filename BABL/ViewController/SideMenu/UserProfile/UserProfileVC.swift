@@ -44,6 +44,7 @@ class UserProfileVC: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var viewSocialInsta: UIView!
     @IBOutlet weak var viewSocialTwitter: UIView!
     @IBOutlet weak var viewSocialLinkedin: UIView!
+    @IBOutlet weak var switchPrivateAcnt: UISwitch!
     
     // MARK: Properties
     var date: String?
@@ -55,6 +56,7 @@ class UserProfileVC: UIViewController, UINavigationControllerDelegate {
     var twitter: String?
     var linkedin: String?
     var animBool: Bool = true
+    var privateAccount: Bool = false
     let dropDown = DropDown()
     var imagePicker = UIImagePickerController()
     private var userProfileResponse = UserProfileViewModel()
@@ -169,7 +171,7 @@ class UserProfileVC: UIViewController, UINavigationControllerDelegate {
                         self.firstName = components.removeFirst()
                         self.lastName = components.joined(separator: " ")
                     }
-                self.userProfileResponse.profileSetupAPI(fullName: (self.firstName ?? "") + " " + (self.lastName ?? ""), email: self.txtEmail.text ?? "", location: self.txtLocation.text ?? "", pronouns: self.gender ?? "", registrationId: UIDevice.current.identifierForVendor?.uuidString ?? "", bio: self.txtViewComment.text ?? "", dob: self.date ?? "", fb: self.txtFB.text ?? "", twitter: self.txtTwitter.text ?? "", linkedin: self.txtLinkedin.text ?? "", insta: self.txtInsta.text ?? "")
+                self.userProfileResponse.profileSetupAPI(fullName: (self.firstName ?? "") + " " + (self.lastName ?? ""), email: self.txtEmail.text ?? "", location: self.txtLocation.text ?? "", pronouns: self.gender ?? "", registrationId: UIDevice.current.identifierForVendor?.uuidString ?? "", bio: self.txtViewComment.text ?? "", dob: self.date ?? "", fb: self.txtFB.text ?? "", twitter: self.txtTwitter.text ?? "", linkedin: self.txtLinkedin.text ?? "", insta: self.txtInsta.text ?? "", privateAccount: self.privateAccount)
             } else {
                 Singleton.shared.showToast(text: AppErrorAndAlerts.invalidFullName.rawValue)
 //                ActivityIndicator.show(view: self.view, color: AppColors.gradientPoint2!)
@@ -296,6 +298,18 @@ class UserProfileVC: UIViewController, UINavigationControllerDelegate {
         }
     }
     
+    @IBAction func switchPrivateAction(_ sender: UISwitch) {
+        if sender.isOn == true {
+            switchPrivateAcnt.setOn(true, animated: true)
+            self.privateAccount = true
+            isValidate()
+        } else {
+            switchPrivateAcnt.setOn(false, animated: true)
+            self.privateAccount = false
+            isValidate()
+        }
+    }
+    
     @IBAction func saveBtnClick(_ sender: UIButton) {
         isValidate()
     }
@@ -343,6 +357,13 @@ extension UserProfileVC: UserProfileViewModelDelegate {
         user.userImage = profileResponse.profileImage ?? ""
         DataBaseHelper.shared.deleteUserDetails(userDetails: UserTable())
         DataBaseHelper.shared.saveUserDetails(userDetails: user)
+        if profileResponse.privateAccount ?? false == true {
+            switchPrivateAcnt.setOn(true, animated: true)
+            self.privateAccount = true
+        } else {
+            switchPrivateAcnt.setOn(false, animated: true)
+            self.privateAccount = false
+        }
         if profileResponse.facebook?.isEmpty == false {
             viewFB.isHidden = true
             viewSocialFB.isHidden = false
