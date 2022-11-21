@@ -303,6 +303,7 @@ class UserProfileVC: UIViewController, UINavigationControllerDelegate {
             switchPrivateAcnt.setOn(true, animated: true)
             self.privateAccount = true
             isValidate()
+            
         } else {
             switchPrivateAcnt.setOn(false, animated: true)
             self.privateAccount = false
