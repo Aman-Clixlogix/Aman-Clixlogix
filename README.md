@@ -1,41 +1,40 @@
-# BABL
+<h1 align="center">
+   <a>
+    <img src="https://clixlogix.org/clixlogixlogo.jpeg"> </a>
+</h1>
+<p align="center">
+    <a href="https://www.clixlogix.com/">
+     https://www.clixlogix.com   
+</a>
+</p>
+<h1 align="center">
+  <b>Aman Jadhav</b>
+</h1>
+<b> About me:</b>
+</br>
+Hi, I'm Aman having an experience of 5+ years in App Development.
+</br>
+</br>
 
-Steps to Run 
-1. Install CocoaPods
-    1.1 Open Terminal
-    1.2 Run Command $ sudo gem install cocoapods
-    1.3 Goto Project folder
-    1.4. Run Command $ pod install
-2. Open BABL.xcworkspace
-3. Select iphone simulator
-4. Run the applecation ( Cmd + R )
+<b>Job Roles:</b>
+<br>
+I’m interested in designing solutions, Architect the project and provide technical solutions
+</br>
+</br>
+<b>Tech Stack and Expertise</b></br>
+Expertise: Mobile App Developer
+</br>
+</br>
 
+<b>How to connect with me</b>
+</br>
+Please connect with me on  <a style="color: blue;" href="https://www.clixlogix.com/contact-us/">aman.jadhav@clixlogix.net</a>
+</br>
+</br>
+<b>Statics:</b>
+<p align="left">
+  <img width="49.5%" src="https://github-readme-stats.vercel.app/api?username=Aman-Clixlogix&show_icons=true&theme=gruvbox&hide_border=true" />
+    <img width="49.5%" src="https://github-readme-streak-stats.herokuapp.com/?user=Aman-Clixlogix&theme=gruvbox&hide_border=true" />
+</p>
+<br>
 
-## Requirements
-
-- iOS 15.0+ 
-- Xcode 13.1
-- Swift 5.0
-
-
-## CocoaPods
-
-Note : CocoaPods is the recommended way to add these library in project
-
-External Library Used
-
-1. IQKeyboardManagerSwift
-2. DropDown
-3. Toaster
-4. SwiftLint
-5. Alamofire
-6. AKSideMenu
-7. GooglePlaces
-8. CountryList
-9. Firebase/Analytics
-10. Firebase/Messaging
-11. Firebase/Crashlytics
-12. SDWebImage
-13. RealmSwift
-14. SwiftyJSON
-15. ProgressHUD
